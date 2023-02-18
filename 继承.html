@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--    定义猫类-->
+    //第一种继承方式
+//     function  Cat(name,age,color){
+//         this.name = name;
+//         this.age = age;
+//         this.color = color;
+//     }
+//     Cat.prototype.run=function(){
+//
+//         console.log(this.name,"小猫正在跑");
+//     }
+//
+//     let catOne = new Cat('xiaohuang',20,'红色');
+//     let catTwo = new Cat('xiaolan',20,'蓝色');
+//
+//
+//     catOne.run();
+//     catTwo.run();
+//
+// console.log(catOne.name);
+// console.log(catTwo.name);
+
+        function Dog(name,age,color){
+            this.name = name;
+            this.age = age;
+            this.color = color;
+        }
+        Dog.prototype.run = function(){
+            console.log(this.name,"正在跑");
+        }
+
+
+        function Keji(name,age,color){
+            Dog.call(this,name,age,color);
+        }
+
+        Keji.prototype=new Dog();
+        Keji.prototype.constructor=Keji;
+
+
+        let keji = new Keji("haha",20,'red');
+         console.log(keji.name);
+         console.log(keji.age);
+         console.log(keji.color);
+         keji.run();
+
+</script>
+</body>
+</html>

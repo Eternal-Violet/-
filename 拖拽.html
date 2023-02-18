@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .drag{
+            width: 100px;
+            height: 100px;
+            background-color: #ff253a;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="drag"></div>
+<script>
+    (function (){
+        let dragElement=null;
+        let leftEl,topEl;
+
+        document.addEventListener('mousedown',function(event){
+            console.log('event.target',event.target);
+            if (event.target.classList.contains('drag')){
+                event.preventDefault();
+                dragElement=event.target;
+
+                leftEl=event.clientX-dragElement.offsetLeft;
+                topEl=event.clientY-dragElement.offsetTop;
+
+                console.log(leftEl);
+                console.log(topEl);
+            }
+        });
+        document.addEventListener('mousemove',function (event) {
+            if (dragElement){
+                dragElement.style.left=event.clientX-leftEl+'px';
+                dragElement.style.top=event.clientY-topEl+'px';
+            }
+        });
+        document.addEventListener('mouseup',function (event) {
+           dragElement=null;
+        });
+
+    })();
+
+
+</script>
+</body>
+</html>

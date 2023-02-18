@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrEr=[[1,2,3],[4,5,6],[7,8,9],[10,11,12]];
+
+    //定义一个一维空数组
+    let arr=[];
+    for (let i = 0; i < arrEr[0].length; i++) {
+        //往里面添加二维空数组
+        arr[i]=[]; //arr【  【】，【】，【】】
+        for (let j = 0; j < arrEr.length; j++) {
+            //实现倒置
+            arr[i][j]=arrEr[j][i];
+        }
+    }
+    console.log(arr);
+    console.log(arr.length);
+</script>
+</body>
+</html>

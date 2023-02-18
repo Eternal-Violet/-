@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    活动结束的时间
+    let activiyDate=new Date('2022/12/28 15:20:00');
+    let activiyTime = activiyDate.getTime();
+
+    var d,h,m,s;
+    let id = setInterval(countTime,1000);
+    function countTime( ){
+        let nowDate=new Date();
+        let nowTime = nowDate.getTime();
+
+        //获取总秒数
+        let sAll = (activiyTime- nowTime)/1000;
+        if ( sAll >0 ){
+             d = parseInt( sAll/60/60/24 );
+             d=d<10?'0'+d:d;
+             h=parseInt(sAll/60/60%24  );
+             h=h<10?'0'+h:h;
+             m=parseInt(  sAll/60%60);
+            m=m<10?'0'+m:m;
+             s=parseInt( sAll%60 );
+            s=s<10?'0'+s:s;
+        }else {
+            clearInterval(id);
+        }
+
+        document.write(d);
+        document.write(h);
+        document.write(m);
+        document.write(s);
+
+    }
+
+
+</script>
+</body>
+</html>

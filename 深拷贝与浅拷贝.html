@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let xiaoming ={
+        name: 'John',
+        age:10
+    };
+
+    let jsonStr = JSON.stringify(xiaoming);
+    console.log(jsonStr);
+    let s = JSON.parse(jsonStr);
+    console.log(s);
+
+    let xiaohong=s;
+    xiaohong.name = 'hhhhhh';
+
+    console.log(xiaoming.name);
+    console.log(xiaohong.name);
+</script>
+</body>
+</html>

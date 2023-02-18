@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="tables" style="width: 400px;height: 400px;"  >
+
+</div>
+<script>
+    let  str='<table >';
+
+    for (let i = 1; i < 10; i++) {
+        str += "<tr >";
+        for (let j = 1; j <= i; j++) {
+            str += "<td>"+j+"*"+i+"="+j*i+"</td>";
+        }
+        str += "</tr>";
+    }
+    str += "</table>";
+    document.getElementsByClassName("tables")[0].innerHTML=str;
+    // document.body.innerHTML=str;
+</script>
+</body>
+</html>

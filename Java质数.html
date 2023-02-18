@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        //质数就是自身和1只能整除的数字
+        for(var i=2;i<=100;i++){
+            for(var j=2;j<=i;j++){
+                if(i%j==0){
+                    break;  //跳出j循环继续i循环
+                }
+            }
+            if(j>=i){
+                document.write(i+' ');
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

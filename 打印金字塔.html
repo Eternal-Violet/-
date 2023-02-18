@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let  num=prompt("请输入你要的金字塔的层数");
+    //输入的书纯数字，其余情况为NAN
+    num=parseInt(num)&& Number(num);
+    if (isNaN(num)){
+        alert("输入的不是纯数字");
+    }else {
+        //遍历金字塔的层数
+        for (let i = 1; i <= num; i++) {
+
+            //星星前面的空格  总层数-当前层数
+            let space=num-i;
+
+            //先打印空格
+            for (let j = 0; j <space ; j++) {
+                document.write("&nbsp;");
+            }
+            //    再打印星星  当前层*2-1
+            let xingxingNum=i*2-1;
+            for (let j = 0; j < xingxingNum; j++) {
+                document.write("*");
+            }
+
+            document.write("</br>");
+
+        }
+    }
+
+</script>
+</body>
+</html>

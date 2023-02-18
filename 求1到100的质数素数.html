@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let num=100;
+  //存放质数的数组
+  let arr=[];
+
+
+  for (let i = 2; i < num; i++) {
+      //默认为质数
+      let flag = true;
+      //将I与I前面的数相除，来断定I是不是质数
+      for (let j = 2; j < i; j++) {
+          //能整除，说明不是质数
+          if (i%j ==0){
+              flag=false;
+          }
+      }
+      //将质数加到数组中
+      if (flag){
+          arr.push(i);
+      }
+  }
+  console.log(arr);
+  console.log(arr.length);
+</script>
+</body>
+</html>

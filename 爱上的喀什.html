@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let str='18898673736';
+  let number = str.match(/1[3-9][0-9]{9}/);
+  console.log(number);//0 表示从索引为0的地方找到了
+  let regExp = new RegExp("^[a-z]{5,8}c$");
+  console.log(regExp.test("abcdfgcdc"));
+
+</script>
+</body>
+</html>
